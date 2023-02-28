@@ -1,0 +1,9 @@
+opentracing:
+  jaeger:
+    http-sender:
+      url: http://localhost:14268/api/traces
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
