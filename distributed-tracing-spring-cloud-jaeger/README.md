@@ -9,7 +9,7 @@ Service 1
 java -jar \
 target/Distributed-Service-0.0.1-SNAPSHOT.jar \
 --spring.application.name=Service-1 \
---server.port=8080
+--server.port=1080
 ```
 
 Service 2
@@ -17,5 +17,9 @@ Service 2
 java -jar \
 target/Distributed-Service-0.0.1-SNAPSHOT.jar \
 --spring.application.name=Service-2 \
---server.port=8090
+--server.port=1081
 ```
+
+To access OpenAPI add "/swagger-ui.html" into the path
+
+To access OpenTracing using `localhost:16686/`
