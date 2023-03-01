@@ -26,9 +26,11 @@ public class Controller {
     @GetMapping("/path1")
     public ResponseEntity path1() {
 
+        RemoteCallCommand command = new RemoteCallCommand("http://localhost:1080/service/path2");
+        String responseRemote = command.execute();
         logger.info("Incoming request at {} for request /path1 ", applicationName);
         String response = restTemplate.getForObject("http://localhost:1080/service/path2", String.class);
-        return ResponseEntity.ok("response from /path1 + " + response);
+        return ResponseEntity.ok("response from /path1 + " + response + responseRemote);
     }
 
     @GetMapping("/path2")

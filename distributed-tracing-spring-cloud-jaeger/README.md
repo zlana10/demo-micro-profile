@@ -20,6 +20,10 @@ target/Distributed-Service-0.0.1-SNAPSHOT.jar \
 --server.port=1081
 ```
 
-To access OpenAPI add "/swagger-ui.html" into the path
+To access OpenAPI add `/swagger-ui.html` into the path
 
 To access OpenTracing using `localhost:16686/`
+
+To access Health Check add `actuator/health` into the path
+
+To access Metrics add `actuator/metrics` into the path
